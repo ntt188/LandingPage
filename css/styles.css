@@ -1,3 +1,5 @@
+@import url('responsive.css');
+
 :root {
     --back-color: #1f2833;
     --header-color: #0b0c10;
@@ -14,6 +16,23 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+    width: 0px;
+}
+
+body.scrollbar {
+    scrollbar-width: auto;
+}
+
+body.scrollbar::-webkit-scrollbar {
+    width: 8px;
 }
 
 html {
@@ -41,7 +60,6 @@ header {
 }
 
 nav {
-    /* background-color: #66FCF1; */
     height: 100%;
     margin: 0 auto;
 }
@@ -58,12 +76,6 @@ ul li {
     justify-content: center;
     align-items: center;
 }
-
-/* ul li:hover .nav-link {
-    color: var(--header-color);
-    background-color: var(--text-main-color);
-    border-radius: 5px;
-} */
 
 ul li .nav-link {
     color: var(--text-main-color);
@@ -86,7 +98,6 @@ section {
     width: 100%;
     height: 100vh;
     background-color: var(--back-color);
-    border-bottom: 1px solid #cccc;
     z-index: 1;
     padding-top: 60px;
     display: flex;
@@ -97,8 +108,7 @@ section {
 }
 
 .section-content {
-    height: 500px;
-    /* margin: auto auto;  */
+    height: auto;
     background-color: var(--box-color);
     border-radius: 10px;
     padding: 10px 100px 10px 10px;
@@ -127,7 +137,6 @@ section {
 
 .section-content.right h1 {
     font-size: 50px;
-    border-bottom: 1px solid black;
     text-align: right;
 }
 
